@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SB Noticias</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar bg-primary navbar-expand-lg" style="height: 70px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: white; padding-left: 30px;" href="#">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="container-fluid d-flex justify-content-evenly">
+                    <form class="d-flex col-sm-12 col-md-6 col-lg-6" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+                    <div class="container-fluid d-flex align-items-center">
+                        <img src="../Imagenes/amigos.png" style="height: 30px; margin-right: 5px;" />
+                        <li class="nav-item col-md-3">
+                            <a class="nav-link active" style="color: white;" aria-current="page" href="#">Amigos</a>
+                        </li>
+                    </div>
+                    <div class="container-fluid d-flex align-items-center">
+                        <img src="../Imagenes/mensaje.png" style="height: 30px; margin-right: 5px;" />
+                        <li class="nav-item col-md-3">
+                            <a class="nav-link active" style="color: white;" aria-current="page" href="#">Mensajes</a>
+                        </li>
+                    </div>
+                    <div class="container-fluid d-flex align-items-center">
+                        <img src="../Imagenes/perfil.png" style="height: 30px; margin-right: 5px;" />
+                        <li class="nav-item col-md-3">
+                            <a class="nav-link active" style="color: black;" aria-current="page" href="#">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Perfil
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de sesión</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="row g-3 needs-validation" novalidate>
+                                                <div class="col-md-6 position-relative">
+                                                  <label for="validationTooltip01" class="form-label">Nombre</label>
+                                                  <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" required>
+                                                  <div class="valid-tooltip">
+                                                    Es valido!
+                                                  </div>
+                                                  <div class="invalid-tooltip">
+                                                    Por favor ingrese un nombre valido.
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6 position-relative">
+                                                  <label for="validationTooltip02" class="form-label">Apellido</label>
+                                                  <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" required>
+                                                  <div class="valid-tooltip">
+                                                    Es valido!
+                                                  </div>
+                                                  <div class="invalid-tooltip">
+                                                    Por favor ingrese un apellido valido.
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6 position-relative">
+                                                  <label for="validationTooltipUsername" class="form-label">Usuario</label>
+                                                  <div class="input-group has-validation">
+                                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                                    <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Correo electrónico" aria-describedby="validationTooltipUsernamePrepend" required>
+                                                    <div class="valid-tooltip">
+                                                      Es valido!
+                                                    </div>
+                                                    <div class="invalid-tooltip">
+                                                      Por favor ingrese un correo valido.
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6 position-relative">
+                                                  <label for="validationTooltipUsername" class="form-label">Contraseña</label>
+                                                  <div class="input-group has-validation">
+                                                    <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Contraseña" aria-describedby="validationTooltipUsernamePrepend" required>
+                                                    <div class="valid-tooltip">
+                                                      Es valido!
+                                                    </div>
+                                                    <div class="invalid-tooltip">
+                                                      Por favor ingrese una contraseña valida.
+                                                    </div>
+                                                  </div>
+                                                </div>
+                          
+                                                <div class="col-12">
+                                                  <hr>
+                                                  <h1 style="font-size: 25px;">
+                                                    Fecha de nacimiento
+                                                  </h1>
+                                                </div>
+                          
+                                                <div class="col-md-4 position-relative">
+                                                  <label for="validationTooltip04" class="form-label">Mes</label>
+                                                  <select class="form-select" id="validationTooltip04" required>
+                                                    <option selected disabled value="">Elegir...</option>
+                                                    <option>...</option>
+                                                    <option>Enero</option>
+                                                    <option>Febrero</option>
+                                                    <option>Marzo</option>
+                                                    <option>Abril</option>
+                                                    <option>Mayo</option>
+                                                    <option>Junio</option>
+                                                    <option>Julio</option>
+                                                    <option>Agosto</option>
+                                                    <option>Septiembre</option>
+                                                    <option>Octubre</option>
+                                                    <option>Noviembre</option>
+                                                    <option>Diciembre</option>
+                                                  </select>
+                                                  <div class="valid-tooltip">
+                                                    Es valido!
+                                                  </div>
+                                                  <div class="invalid-tooltip">
+                                                    Por favor ingrese un mes valido.
+                                                  </div>
+                                                </div>
+                          
+                                                <div class="col-md-4 position-relative">
+                                                  <label for="validationTooltip04" class="form-label">Día</label>
+                                                  <select class="form-select" id="validationTooltip04" required>
+                                                    <option selected disabled value="">Elegir...</option>
+                                                    <option>...</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>24</option>
+                                                    <option>25</option>
+                                                    <option>26</option>
+                                                    <option>27</option>
+                                                    <option>28</option>
+                                                    <option>29</option>
+                                                    <option>30</option>
+                                                    <option>31</option>
+                                                  </select>
+                                                  <div class="valid-tooltip">
+                                                    Es valido!
+                                                  </div>
+                                                  <div class="invalid-tooltip">
+                                                    Por favor ingrese un día valido.
+                                                  </div>
+                                                </div>
+                                                
+                                                <div class="col-md-4 position-relative">
+                                                  <label for="validationTooltip04" class="form-label">Año</label>
+                                                  <select class="form-select" id="validationTooltip04" required>
+                                                    <option selected disabled value="">Elegir...</option>
+                                                    <option>...</option>
+                                                    <option>1950</option>
+                                                    <option>1951</option>
+                                                    <option>1952</option>
+                                                    <option>1953</option>
+                                                    <option>1954</option>
+                                                    <option>1955</option>
+                                                    <option>1956</option>
+                                                    <option>1957</option>
+                                                    <option>1958</option>
+                                                    <option>1959</option>
+                                                    <option>1960</option>
+                                                    <option>1961</option>
+                                                    <option>1962</option>
+                                                    <option>1963</option>
+                                                    <option>1964</option>
+                                                    <option>1965</option>
+                                                    <option>1966</option>
+                                                    <option>1967</option>
+                                                    <option>1968</option>
+                                                    <option>1969</option>
+                                                    <option>1970</option>
+                                                    <option>1971</option>
+                                                    <option>1972</option>
+                                                    <option>1973</option>
+                                                    <option>1974</option>
+                                                    <option>1975</option>
+                                                    <option>1976</option>
+                                                    <option>1977</option>
+                                                    <option>1978</option>
+                                                    <option>1979</option>
+                                                    <option>1980</option>
+                                                    <option>1981</option>
+                                                    <option>1982</option>
+                                                    <option>1983</option>
+                                                    <option>1984</option>
+                                                    <option>1985</option>
+                                                    <option>1986</option>
+                                                    <option>1987</option>
+                                                    <option>1988</option>
+                                                    <option>1989</option>
+                                                    <option>1990</option>
+                                                    <option>1991</option>
+                                                    <option>1992</option>
+                                                    <option>1993</option>
+                                                    <option>1994</option>
+                                                    <option>1995</option>
+                                                    <option>1996</option>
+                                                    <option>1997</option>
+                                                    <option>1998</option>
+                                                    <option>1999</option>
+                                                    <option>2000</option>
+                                                    <option>2001</option>
+                                                    <option>2002</option>
+                                                    <option>2003</option>
+                                                    <option>2004</option>
+                                                    <option>2005</option>
+                                                    <option>2006</option>
+                                                    <option>2007</option>
+                                                    <option>2008</option>
+                                                    <option>2009</option>
+                                                    <option>2010</option>
+                                                    <option>2011</option>
+                                                    <option>2012</option>
+                                                    <option>2013</option>
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                                    <option>2017</option>
+                                                    <option>2018</option>
+                                                    <option>2019</option>
+                                                    <option>2020</option>
+                                                    <option>2021</option>
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                  </select>
+                                                  <div class="valid-tooltip">
+                                                    Es valido!
+                                                  </div>
+                                                  <div class="invalid-tooltip">
+                                                    Por favor ingrese un año valido.
+                                                  </div>
+                                                </div>
+                                              
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                  <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+    
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container-fluid mt-3">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col-md-2 col-lg-2">
+                <div class="d-flex justify-content-center" style="padding: 5px; background-color: gainsboro; color: dark; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;">
+                    <h1 style="font-size: 30px;">Tematicas</h1>
+                </div>
+                <ul class="list-group" style="text-align: center;">
+                    <li class="list-group-item">Emprendimientos</li>
+                    <li class="list-group-item">Denuncias</li>
+                    <li class="list-group-item">Clima</li>
+                    <li class="list-group-item">Eventos</li>
+                    <li class="list-group-item">Anuncios</li>
+                  </ul>
+            </div>
+
+            <div class="col-md-10 col-lg-10">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-8 col-lg-8">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="../Imagenes/profile_121261.png" style="height: 30px;"/>
+                                <label for="exampleFormControlTextarea1" class="form-label ml-2" style="padding-left: 10px; padding-top: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Usuario</label>
+                            </div>
+                            <div class="dropdown mb-2">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tematicas
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Emprendimientos</a></li>
+                                    <li><a class="dropdown-item" href="#">Denuncias</a></li>
+                                    <li><a class="dropdown-item" href="#">Clima</a></li>
+                                    <li><a class="dropdown-item" href="#">Eventos</a></li>
+                                    <li><a class="dropdown-item" href="#">Anuncios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <textarea class="form-control" style="height: 120px; resize: none;" placeholder="Ingrese un texto" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="d-flex">
+                                <img src="../Imagenes/image_picture_icon_143003.png" style="height: 30px; margin-right: 10px;"/>
+                                <img src="../Imagenes/sticker-icon-512x512-rzveai8i.png" style="height: 30px; margin-right: 10px;"/>
+                                <img src="../Imagenes/ubicacion.png" style="height: 30px;"/>
+                            </div>
+                            <button type="button" class="btn btn-primary">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex bg-primary mt-5" style="padding: 20px; padding-left: 80px; color: white;">
+                    <h2>Recientes</h2>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-8 col-lg-8">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="../Imagenes/profile_121261.png" style="height: 30px;"/>
+                                <label for="exampleFormControlTextarea1" class="form-label ml-2" style="padding-left: 10px; padding-top: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Usuario_7532</label>
+                            </div>
+                            
+                        </div>
+                        <textarea class="form-control" style="height: 120px; resize: none;" id="exampleFormControlTextarea1" rows="3" readonly>El otro día me topé con un viejo amigo, y resulta que lo habían asaltado hace poco cerca de esa zona, así que hablaba por aquí para dar el aviso y que tuvieran cuidado. Fue entre la calle ... y la calle ...
+                        </textarea>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="d-flex">
+                                <img src="../Imagenes/like.png" style="height: 30px; margin-right: 10px;"/>
+                                <img src="../Imagenes/dislike.png" style="height: 30px; margin-right: 10px;"/>
+                                <img src="../Imagenes/comentario.png" style="height: 30px;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+            
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    </script>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
